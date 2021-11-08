@@ -6,7 +6,11 @@ var bullet = preload("res://scenes/bullet_default.tscn")
 # Constant
 const speed_y = 500
 const speed_h = 500
+
+# Variables
 var velocity
+var cd = 0.2
+var timer = 0
 
 # Player status
 var status = {
@@ -27,19 +31,25 @@ func get_input():
 		movement.x += speed_h
 	return movement
 
+# Move per physic process (see godot documentation)
 func _physics_process(delta):
 	velocity = get_input()
 	move_and_collide(velocity * delta)
 
 func _process(delta):
 	
+	if timer > 0:
+		timer -= delta
+	
 	# Shooting
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_pressed("shoot") and timer <= 0:
 		var inst = bullet.instance()
 		inst.transform = transform
 		get_parent().add_child(inst)
+		timer = cd
 		print("Shoot!")
 
+
+# Getting damaged
 func damaged(damage: int):
 	status["hp"] -= damage
-	print("HP = ", status["hp"])
