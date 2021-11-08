@@ -11,5 +11,5 @@ func _process(delta):
 	level.translate(Vector2(-move_speed * delta, 0))
 	ui.status = player.status
 
-func damaged():
-	world_health -= 1
+func damaged(damage:int):
+	player.damaged(damage)

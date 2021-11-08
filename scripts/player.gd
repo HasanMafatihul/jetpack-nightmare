@@ -10,7 +10,7 @@ const speed_h = 500
 # Variables
 var velocity
 var cd = 0.2
-var timer = 0
+var cd_timer = 0
 
 # Player status
 var status = {
@@ -38,15 +38,16 @@ func _physics_process(delta):
 
 func _process(delta):
 	
-	if timer > 0:
-		timer -= delta
+	# Cooldown timer
+	if cd_timer > 0:
+		cd_timer -= delta
 	
 	# Shooting
-	if Input.is_action_pressed("shoot") and timer <= 0:
+	if Input.is_action_pressed("shoot") and cd_timer <= 0:
 		var inst = bullet.instance()
 		inst.transform = transform
 		get_parent().add_child(inst)
-		timer = cd
+		cd_timer = cd
 		print("Shoot!")
 
 
