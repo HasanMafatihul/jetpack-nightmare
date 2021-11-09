@@ -48,7 +48,6 @@ func _process(delta):
 		inst.transform = transform
 		get_parent().add_child(inst)
 		cd_timer = cd
-		print("Shoot!")
 
 
 # Getting damaged

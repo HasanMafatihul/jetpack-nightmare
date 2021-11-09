@@ -1,7 +1,7 @@
 extends Node2D
 
 onready var level = $levels
-onready var ui = $ui
+onready var ui = $CanvasLayer/ui
 onready var player = $Player
 var move_speed = 200
 
