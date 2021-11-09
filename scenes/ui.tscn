@@ -4,22 +4,44 @@
 
 [node name="ui" type="Control"]
 pause_mode = 2
-margin_right = 1028.0
-margin_bottom = 600.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource( 1 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="hp" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "HP : "
+[node name="hp" type="HBoxContainer" parent="."]
+margin_left = 15.0
+margin_top = 9.0
+margin_right = 254.0
+margin_bottom = 44.0
+custom_constants/separation = 10
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="hp" type="Label" parent="hp"]
+margin_top = 10.0
+margin_right = 18.0
+margin_bottom = 24.0
+text = "HP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hpbar" type="ProgressBar" parent="hp"]
+margin_left = 28.0
+margin_right = 239.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+value = 0.16
+percent_visible = false
+
 [node name="pause" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -65,7 +87,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="pause"]
+[node name="paused" type="Label" parent="pause"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -25.5
@@ -74,6 +96,19 @@ margin_right = 25.5
 margin_bottom = 171.153
 text = "PAUSED"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coins" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -407.606
+margin_top = 8.48528
+margin_right = -10.6064
+margin_bottom = 22.4853
+text = "Coins = "
+align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
