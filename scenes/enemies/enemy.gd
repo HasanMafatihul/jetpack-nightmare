@@ -25,5 +25,6 @@ func _on_enemy_body_entered(body):
 		# Last Boundary
 		8:
 			queue_free()
+			print("Last bound")
 			get_node("/root/main").damaged(damage)
 	
