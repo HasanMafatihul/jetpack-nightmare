@@ -1,8 +1,119 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
 
-[node name="Control" type="Control"]
+[ext_resource path="res://scenes/screens/hub.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://scenes/screens/button_global.gd" type="Script" id=3]
+
+[node name="hub" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Items" type="ItemList" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -236.902
+margin_top = -139.519
+margin_right = -116.902
+margin_bottom = 9.48138
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 137.0
+margin_top = -177.0
+margin_right = 363.0
+margin_bottom = 123.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="img" type="TextureRect" parent="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -32.0
+margin_top = 10.0
+margin_right = 32.0
+margin_bottom = 64.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -104.0
+margin_top = 147.0
+margin_right = 104.0
+margin_bottom = 161.0
+text = "Name"
+
+[node name="price" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -104.0
+margin_top = 166.843
+margin_right = 104.0
+margin_bottom = 180.843
+text = "Price"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="desc" type="RichTextLabel" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -101.0
+margin_top = -115.0
+margin_right = 102.0
+margin_bottom = -7.0
+text = "Description lorem ipsum dolor et"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 17.0
+margin_top = -52.0
+margin_right = 112.0
+margin_bottom = -7.0
+text = "Back"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://scenes/screens/main_menu.tscn"
+altkey = "ui_cancel"
+
+[node name="coins" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -172.0
+margin_top = -23.0
+margin_right = -11.0
+margin_bottom = -9.0
+text = "Coins"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="item_selected" from="Items" to="." method="_on_Items_item_selected"]

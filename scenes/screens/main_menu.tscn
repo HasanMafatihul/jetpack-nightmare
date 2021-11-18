@@ -58,6 +58,7 @@ margin_top = 42.0
 margin_right = 289.0
 margin_bottom = 75.0
 size_flags_vertical = 3
+disabled = true
 text = "sound"
 script = ExtResource( 2 )
 
@@ -68,3 +69,4 @@ margin_bottom = 118.0
 size_flags_vertical = 3
 text = "HUB"
 script = ExtResource( 2 )
+path = "res://scenes/screens/hub.tscn"
