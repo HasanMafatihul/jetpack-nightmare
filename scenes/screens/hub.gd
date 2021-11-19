@@ -9,14 +9,17 @@ export var item = {
 var item_name = []
 var selected
 
+# Adding items
 func _ready():
 	for i in item:
 		$Items.add_item(i)
 		item_name.append(i)
 
+# Updating coins display
 func _process(_delta):
 	$coins.text = "Coins : " + str(global.coins)
 
+# When an item is selected
 func _on_Items_item_selected(index):
 	selected = item_name[index]
 	if item[selected][0]:

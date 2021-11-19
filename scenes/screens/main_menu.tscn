@@ -59,7 +59,7 @@ margin_right = 289.0
 margin_bottom = 75.0
 size_flags_vertical = 3
 disabled = true
-text = "sound"
+text = "OPTIONS"
 script = ExtResource( 2 )
 
 [node name="hub" type="Button" parent="VBoxContainer"]
