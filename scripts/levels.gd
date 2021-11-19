@@ -11,6 +11,11 @@ export var move_speed = 200
 func _process(delta):
 	level.translate(Vector2(-move_speed * delta, 0))
 	ui.status = player.status
+	
+	# When player dies
+	if player.status["hp"] <= 0:
+		# Call UI fail function to handle it
+		ui.fail()
 
 # Passing damaged to player
 func damaged(damage:int):
@@ -22,4 +27,3 @@ func finish():
 	
 	# Goto next level after things receed.
 	global.goto_scene("res://scenes/levels/level-1.tscn")
-	pass
