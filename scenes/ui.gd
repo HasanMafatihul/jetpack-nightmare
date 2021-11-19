@@ -8,7 +8,7 @@ var status = {
 func _process(delta):
 	# Updating UI
 	$hp/hpbar.value = status["hp"]
-	$coins.text = "Coins = " + str(global.coins)
+	$coins.text = "Coins = " + str(global.save_data["coins"])
 	
 	# Pausing
 	if Input.is_action_just_pressed("pause"):

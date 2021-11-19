@@ -17,7 +17,7 @@ func _ready():
 
 # Updating coins display
 func _process(_delta):
-	$coins.text = "Coins : " + str(global.coins)
+	$coins.text = "Coins : " + str(global.save_data["coins"])
 
 # When an item is selected
 func _on_Items_item_selected(index):

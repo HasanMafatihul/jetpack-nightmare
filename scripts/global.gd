@@ -3,11 +3,16 @@ extends Node
 # Current scene
 var current_scene = null
 
-# Global coins
-var coins = 0
+# Persistent data
+var save_data = {
+	"coins": 0,
+	
+}
 
 # Init
 func _ready():
+	load_save()
+	
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
 
@@ -16,6 +21,9 @@ func goto_scene(path):
 	if path == "quit":
 		get_tree().quit()
 		return
+	
+	# Saving game every scene change
+	save_game()
 	
 	call_deferred("_deferred_goto_scene", path)
 
@@ -35,3 +43,22 @@ func _deferred_goto_scene(path):
 
 	# Optionally, to make it compatible with the SceneTree.change_scene() API.
 	get_tree().set_current_scene(current_scene)
+
+# Saving game
+func save_game():
+	var save_game = File.new()
+	save_game.open("user://overhealed.save", File.WRITE)
+	save_game.store_line(to_json(save_data))
+	save_game.close()
+
+# Loading save directly to persistent data
+func load_save():
+	var save_game = File.new()
+	var save_nodes = get_tree().get_nodes_in_group("Persist")
+	
+	if not save_game.file_exists("user://overhealed.save"):
+		return # Error! We don't have a save to load.
+		
+	save_game.open("user://overhealed.save", File.READ)
+	save_data = parse_json(save_game.get_line())
+	save_game.close()
