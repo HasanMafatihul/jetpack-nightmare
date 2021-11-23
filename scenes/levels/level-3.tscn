@@ -22,7 +22,7 @@ b = Vector2( 0, 600 )
 
 [node name="main" type="Node2D"]
 script = ExtResource( 3 )
-next_level = "res://scenes/levels/level-3.tscn"
+next_level = "res://scenes/screens/main_menu.tscn"
 
 [node name="border" type="Node2D" parent="."]
 __meta__ = {
@@ -40,7 +40,7 @@ shape = SubResource( 1 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="border/StaticBody2D"]
-position = Vector2( 1357.65, 0 )
+position = Vector2( 1028, 0 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="border/StaticBody2D"]
@@ -53,147 +53,182 @@ collision_mask = 3
 
 [node name="levels" type="Node2D" parent="."]
 
-[node name="obstacle3" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 1402.07, 440.006 )
-scale = Vector2( 2, 2 )
+[node name="obstacle" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 1130.85, 290.175 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle2" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 1520.9, 529.904 )
+scale = Vector2( 3, 3 )
 
 [node name="obstacle4" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 2200.32, 308.154 )
+position = Vector2( 2257.6, 71.3821 )
+scale = Vector2( 3, 3 )
+
+[node name="obstacle3" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 1852.22, 196.909 )
 scale = Vector2( 2, 2 )
 
 [node name="obstacle5" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 2717.04, 479.206 )
+position = Vector2( 2799.38, 357.948 )
 scale = Vector2( 2, 2 )
 
 [node name="obstacle7" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 3403.98, 454.512 )
-scale = Vector2( 2, 2 )
-
-[node name="obstacle8" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 4244.93, 163.517 )
-scale = Vector2( 2, 2 )
-
-[node name="obstacle9" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 4234.25, 489.218 )
+position = Vector2( 4265.93, 234.475 )
 scale = Vector2( 2, 2 )
 
 [node name="obstacle10" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 4900.96, 295.555 )
+position = Vector2( 5591.36, 501.579 )
 scale = Vector2( 2, 2 )
 
 [node name="obstacle11" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 5562.07, 87.9 )
+position = Vector2( 5878.62, 335.269 )
 scale = Vector2( 2, 2 )
 
 [node name="obstacle12" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 6261.31, 575.253 )
+position = Vector2( 6369.99, 471.34 )
 scale = Vector2( 2, 2 )
 
 [node name="obstacle13" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 6138.42, 409.977 )
+position = Vector2( 6841.2, 143.761 )
+scale = Vector2( 2, 2 )
+
+[node name="obstacle14" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 7149.2, 499.761 )
+scale = Vector2( 2, 2 )
+
+[node name="obstacle17" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 7149.2, 499.761 )
+scale = Vector2( 2, 2 )
+
+[node name="obstacle18" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 8592.69, 367.31 )
 scale = Vector2( 2, 2 )
 
 [node name="obstacle6" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 2718.82, 126.41 )
-scale = Vector2( 2, 2 )
+position = Vector2( 3346.18, 269.753 )
+scale = Vector2( 3, 3 )
 
-[node name="obstacle2" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 1154.73, 172.09 )
-scale = Vector2( 2, 2 )
+[node name="obstacle8" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 4601.06, 494.019 )
+scale = Vector2( 3, 3 )
+
+[node name="obstacle9" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 4868.17, 103.444 )
+scale = Vector2( 4, 4 )
+
+[node name="obstacle15" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 7620.17, 131.444 )
+scale = Vector2( 5, 5 )
+
+[node name="obstacle16" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 8004.17, 591.444 )
+scale = Vector2( 5, 5 )
 
 [node name="enemy" parent="levels" instance=ExtResource( 5 )]
-position = Vector2( 1883.72, 64.4125 )
+position = Vector2( 1550.71, 116.548 )
 scale = Vector2( 2, 2 )
 
 [node name="enemy2" parent="levels" instance=ExtResource( 5 )]
-position = Vector2( 2163.6, 531.493 )
+position = Vector2( 2354.54, 464.286 )
 scale = Vector2( 2, 2 )
 
 [node name="enemy3" parent="levels" instance=ExtResource( 5 )]
-position = Vector2( 3211.98, 122.916 )
+position = Vector2( 3881.56, 297.977 )
 scale = Vector2( 2, 2 )
 
 [node name="enemy4" parent="levels" instance=ExtResource( 5 )]
-position = Vector2( 4666.04, 145.14 )
+position = Vector2( 5121.32, 408.85 )
 scale = Vector2( 2, 2 )
 
 [node name="enemy5" parent="levels" instance=ExtResource( 5 )]
-position = Vector2( 5069.24, 554.69 )
+position = Vector2( 5925.15, 161.905 )
 scale = Vector2( 2, 2 )
 
 [node name="enemy6" parent="levels" instance=ExtResource( 5 )]
-position = Vector2( 5768.48, 380.938 )
+position = Vector2( 6804.58, 486.965 )
 scale = Vector2( 2, 2 )
 
 [node name="enemy7" parent="levels" instance=ExtResource( 5 )]
-position = Vector2( 6628.77, 219.899 )
+position = Vector2( 7564.58, 422.965 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy8" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 8375, 153.574 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy9" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 8974.39, 348.882 )
 scale = Vector2( 2, 2 )
 
 [node name="coin" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 1438.1, 218.096 )
+position = Vector2( 1307.82, 371.779 )
 
 [node name="coin2" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 1644.79, 284.022 )
+position = Vector2( 1509.63, 269.19 )
 
 [node name="coin3" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 1806.94, 374.894 )
+position = Vector2( 1756.85, 449.141 )
 
 [node name="coin4" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 1958.39, 463.984 )
+position = Vector2( 1975.49, 102.692 )
 
 [node name="coin5" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 2042.13, 148.606 )
+position = Vector2( 2067.99, 208.645 )
 
 [node name="coin6" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 2209.62, 111.188 )
+position = Vector2( 2201.48, 513.77 )
 
 [node name="coin7" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 2359.29, 159.296 )
-
-[node name="coin8" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 2491.15, 291.149 )
-
-[node name="coin9" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 2589.14, 430.13 )
+position = Vector2( 2536.27, 414.181 )
 
 [node name="coin10" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 2841.02, 397.845 )
+position = Vector2( 3347.66, 81.5617 )
 
 [node name="coin11" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 2960, 287.844 )
+position = Vector2( 3335.06, 520.014 )
 
 [node name="coin12" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 3078.98, 236.211 )
+position = Vector2( 3634.92, 290.709 )
 
 [node name="coin13" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 3393.27, 247.435 )
+position = Vector2( 4277.48, 89.1213 )
 
 [node name="coin14" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 3557.15, 321.518 )
+position = Vector2( 4400.95, 386.463 )
 
 [node name="coin15" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 3652.77, 442.986 )
+position = Vector2( 4663.02, 310.867 )
 
 [node name="coin16" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 3778.25, 338.868 )
+position = Vector2( 4915, 492.296 )
 
 [node name="coin17" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 3946.44, 232.081 )
-
-[node name="coin19" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 4511.55, 381.297 )
-
-[node name="coin20" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 5314.78, 352.724 )
-
-[node name="coin21" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 6018.26, 246.777 )
+position = Vector2( 5328.25, 310.867 )
 
 [node name="coin18" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 4240.1, 50.5431 )
+position = Vector2( 5733.95, 421.74 )
+
+[node name="coin19" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 6174.92, 290.709 )
+
+[node name="coin20" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 6572.02, 286.709 )
+
+[node name="coin21" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 7060.02, 326.709 )
+
+[node name="coin22" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 8152.02, 322.709 )
+
+[node name="coin8" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 2807.49, 212.883 )
+
+[node name="coin9" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 2953.7, 363.327 )
 
 [node name="finish" parent="levels" instance=ExtResource( 7 )]
-position = Vector2( 6423.36, 0 )
+position = Vector2( 9239.95, 0 )
 
 [node name="lastboundary" type="Node2D" parent="."]
 

@@ -15,6 +15,3 @@ func _on_obstacle_body_entered(body):
 		# Player
 		1:
 			body.damaged(damage)
-		# Last Boundary
-		8:
-			queue_free()

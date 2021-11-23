@@ -48,7 +48,7 @@ position = Vector2( 0, 600 )
 shape = SubResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 103.383, 142.339 )
+position = Vector2( 104, 142 )
 collision_mask = 3
 
 [node name="levels" type="Node2D" parent="."]
@@ -147,7 +147,7 @@ collision_layer = 8
 collision_mask = 31
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="lastboundary/StaticBody2D"]
-position = Vector2( -192, 0 )
+position = Vector2( -47.913, 0 )
 shape = SubResource( 4 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

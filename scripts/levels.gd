@@ -12,6 +12,9 @@ export var next_level:String
 
 func _ready():
 	player.status = global.status
+	player.transform.origin = player.status["transform"]
+	print(player.status["transform"])
+	print(player.transform)
 
 # Moving levels and updating UI
 func _process(delta):

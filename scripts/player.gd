@@ -15,7 +15,7 @@ var cd_timer = 0
 # Player status
 var status = {
 	"hp": 100,
-	"coin": 0
+	"coin": 0,
 }
 
 # Input
@@ -37,6 +37,9 @@ func _physics_process(delta):
 	move_and_collide(velocity * delta)
 
 func _process(delta):
+	
+	# Updating status transform
+	status["transform"] = transform.origin
 	
 	# Cooldown timer
 	if cd_timer > 0:
