@@ -19,6 +19,10 @@ config/icon="res://icon.png"
 global="*res://scripts/global.gd"
 audio="*res://scenes/audio.tscn"
 
+[display]
+
+window/size/resizable=false
+
 [input]
 
 ui_up={
