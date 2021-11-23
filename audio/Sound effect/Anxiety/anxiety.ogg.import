@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/anxiety.ogg-c6d7cf353c2e4f493a8bd792ffb3e1ae.oggstr"
+
+[deps]
+
+source_file="res://audio/Sound effect/Anxiety/anxiety.ogg"
+dest_files=[ "res://.import/anxiety.ogg-c6d7cf353c2e4f493a8bd792ffb3e1ae.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

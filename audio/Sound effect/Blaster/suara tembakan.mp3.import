@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/suara tembakan.mp3-519b59fd64a91493d5384926eb1f6e9e.mp3str"
+
+[deps]
+
+source_file="res://audio/Sound effect/Blaster/suara tembakan.mp3"
+dest_files=[ "res://.import/suara tembakan.mp3-519b59fd64a91493d5384926eb1f6e9e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

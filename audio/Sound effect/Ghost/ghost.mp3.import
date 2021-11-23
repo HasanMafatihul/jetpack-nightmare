@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ghost.mp3-a37b1e9dee1b24f98e5ef9cb9e667342.mp3str"
+
+[deps]
+
+source_file="res://audio/Sound effect/Ghost/ghost.mp3"
+dest_files=[ "res://.import/ghost.mp3-a37b1e9dee1b24f98e5ef9cb9e667342.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

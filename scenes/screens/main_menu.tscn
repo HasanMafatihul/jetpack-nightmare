@@ -51,9 +51,9 @@ margin_bottom = 32.0
 size_flags_vertical = 3
 text = "START"
 script = ExtResource( 2 )
-path = "res://scenes/main.tscn"
+path = "res://scenes/init.tscn"
 
-[node name="sound" type="Button" parent="VBoxContainer"]
+[node name="options" type="Button" parent="VBoxContainer"]
 margin_top = 42.0
 margin_right = 289.0
 margin_bottom = 75.0

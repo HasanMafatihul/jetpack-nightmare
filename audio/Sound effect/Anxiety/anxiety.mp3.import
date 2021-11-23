@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/anxiety.mp3-e37fa5cdcc79d89748c8a886245f833a.mp3str"
+
+[deps]
+
+source_file="res://audio/Sound effect/Anxiety/anxiety.mp3"
+dest_files=[ "res://.import/anxiety.mp3-e37fa5cdcc79d89748c8a886245f833a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

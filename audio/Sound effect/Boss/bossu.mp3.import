@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bossu.mp3-aa8e6f99f58d8a405100dbc3f89f9b56.mp3str"
+
+[deps]
+
+source_file="res://audio/Sound effect/Boss/bossu.mp3"
+dest_files=[ "res://.import/bossu.mp3-aa8e6f99f58d8a405100dbc3f89f9b56.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -6,7 +6,13 @@ var current_scene = null
 # Persistent data
 var save_data = {
 	"coins": 0,
-	
+	"high_score": 0
+}
+
+# Player status
+var status = {
+	"hp": 100,
+	"score": 0
 }
 
 # Init

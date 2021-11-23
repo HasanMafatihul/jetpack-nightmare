@@ -1,12 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/ui.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/levels.gd" type="Script" id=3]
 [ext_resource path="res://scenes/obstacles/obstacle_generic.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/enemies/enemy_generic.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/coin.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/finish.tscn" type="PackedScene" id=7]
 
 [sub_resource type="SegmentShape2D" id=1]
 b = Vector2( 0, 600 )
@@ -22,7 +20,6 @@ b = Vector2( 0, 600 )
 
 [node name="main" type="Node2D"]
 script = ExtResource( 3 )
-next_level = "res://scenes/screens/main_menu.tscn"
 
 [node name="border" type="Node2D" parent="."]
 __meta__ = {
@@ -65,22 +62,6 @@ scale = Vector2( 2, 2 )
 position = Vector2( 734.208, 295.034 )
 scale = Vector2( 2, 2 )
 
-[node name="obstacle4" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 2822.21, 251.034 )
-scale = Vector2( 2, 2 )
-
-[node name="obstacle5" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 3626.21, 249.034 )
-scale = Vector2( 2, 2 )
-
-[node name="obstacle6" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 4304.84, 394.395 )
-scale = Vector2( 2, 2 )
-
-[node name="obstacle7" parent="levels" instance=ExtResource( 4 )]
-position = Vector2( 4828.69, 87.9257 )
-scale = Vector2( 2, 2 )
-
 [node name="enemy" parent="levels" instance=ExtResource( 5 )]
 position = Vector2( 1783.92, 148.157 )
 scale = Vector2( 2, 2 )
@@ -88,57 +69,6 @@ scale = Vector2( 2, 2 )
 [node name="enemy2" parent="levels" instance=ExtResource( 5 )]
 position = Vector2( 1905.22, 369.349 )
 scale = Vector2( 2, 2 )
-
-[node name="enemy3" parent="levels" instance=ExtResource( 5 )]
-position = Vector2( 3023.22, 83.3491 )
-scale = Vector2( 2, 2 )
-
-[node name="enemy4" parent="levels" instance=ExtResource( 5 )]
-position = Vector2( 4159.06, 112.543 )
-scale = Vector2( 2, 2 )
-
-[node name="enemy5" parent="levels" instance=ExtResource( 5 )]
-position = Vector2( 5096.28, 294.287 )
-scale = Vector2( 2, 2 )
-
-[node name="coin" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 2315.56, 267.049 )
-
-[node name="coin2" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 2458.39, 267.049 )
-
-[node name="coin3" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 2601.78, 267.049 )
-
-[node name="coin4" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 2799.78, 109.049 )
-
-[node name="coin5" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 2815.78, 429.049 )
-
-[node name="coin6" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 3149.78, 335.049 )
-
-[node name="coin7" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 3455.78, 133.049 )
-
-[node name="coin8" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 3886.68, 233.842 )
-
-[node name="coin9" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 4528.12, 123.371 )
-
-[node name="coin10" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 4766.88, 301.551 )
-
-[node name="coin11" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 5297.86, 290.86 )
-
-[node name="coin12" parent="levels" instance=ExtResource( 6 )]
-position = Vector2( 5444.01, 295.9 )
-
-[node name="finish" parent="levels" instance=ExtResource( 7 )]
-position = Vector2( 5572.46, 0 )
 
 [node name="lastboundary" type="Node2D" parent="."]
 

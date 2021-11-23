@@ -3,6 +3,9 @@ extends Area2D
 # Enemy damage. Adjustable
 export var damage = 10
 
+# Score by killing
+export var score = 5
+
 # Enemy custom speed. Adjustable
 export var move = 0
 
@@ -18,6 +21,7 @@ func _on_enemy_body_entered(body):
 		4:
 			queue_free()
 			body.queue_free()
+			get_node("/root/main").score(score)
 		# Player
 		1:
 			body.damaged(damage)

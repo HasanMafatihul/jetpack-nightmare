@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/anxiety.wav-d31d4836c97223f97c20a8b4ce4c1b3b.sample"
+
+[deps]
+
+source_file="res://audio/Sound effect/Anxiety/anxiety.wav"
+dest_files=[ "res://.import/anxiety.wav-d31d4836c97223f97c20a8b4ce4c1b3b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
