@@ -47,6 +47,7 @@ func _process(delta):
 		var inst = bullet.instance()
 		inst.transform = transform
 		get_parent().add_child(inst)
+		audio.playSound("shoot")
 		cd_timer = cd
 
 

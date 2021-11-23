@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://audio/Sound effect/Blaster/suara tembakan.wav" type="AudioStream" id=1]
+[ext_resource path="res://scripts/audio.gd" type="Script" id=2]
+
+[node name="audioControl" type="Node"]
+script = ExtResource( 2 )
+
+[node name="ost" type="AudioStreamPlayer" parent="."]
+
+[node name="player" type="Node2D" parent="."]
+
+[node name="shoot" type="AudioStreamPlayer" parent="player"]
+stream = ExtResource( 1 )
