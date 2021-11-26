@@ -1,0 +1,373 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/ui.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/levels.gd" type="Script" id=3]
+[ext_resource path="res://scenes/obstacles/obstacle_generic.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/enemies/enemy_generic.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/coin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/finish.tscn" type="PackedScene" id=7]
+
+[sub_resource type="SegmentShape2D" id=1]
+b = Vector2( 0, 600 )
+
+[sub_resource type="SegmentShape2D" id=2]
+b = Vector2( 1028, 0 )
+
+[sub_resource type="SegmentShape2D" id=3]
+b = Vector2( 1028, 0 )
+
+[sub_resource type="SegmentShape2D" id=4]
+b = Vector2( 0, 600 )
+
+[node name="main" type="Node2D"]
+script = ExtResource( 3 )
+next_level = "res://scenes/screens/main_menu.tscn"
+
+[node name="border" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="border"]
+collision_layer = 2
+collision_mask = 7
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border/StaticBody2D"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="border/StaticBody2D"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="border/StaticBody2D"]
+position = Vector2( 1028, 0 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="border/StaticBody2D"]
+position = Vector2( 0, 600 )
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 103.383, 142.339 )
+collision_mask = 3
+
+[node name="levels" type="Node2D" parent="."]
+
+[node name="obstacle" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 1117.38, 310.379 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle2" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 1121.87, 58.9478 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle3" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 1121.87, 557.321 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="enemy" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 1406.55, 294.082 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy2" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 1402.54, 37.7924 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy3" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 1917.79, 124.557 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy4" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 2175.42, 48.4712 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy5" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 2489.28, 498.312 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy6" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 3001.86, 181.955 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy7" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 4249.56, 150.207 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy8" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 4200.68, 434.679 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy9" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 4775.2, 458.618 )
+scale = Vector2( 2, 2 )
+
+[node name="coin" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 1254.43, 174.223 )
+
+[node name="coin2" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 1259.77, 433.182 )
+
+[node name="coin3" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 1411.94, 562.661 )
+
+[node name="coin4" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 1576.12, 282.345 )
+
+[node name="coin5" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 1943.2, 277.005 )
+
+[node name="coin7" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 2067.34, 550.648 )
+
+[node name="coin8" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 2229.16, 281.01 )
+
+[node name="coin13" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 2292.02, 229.377 )
+
+[node name="coin14" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 2296.51, 343.868 )
+
+[node name="coin15" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 2372.84, 287.745 )
+
+[node name="coin9" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 2732.27, 68.7704 )
+
+[node name="coin10" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 2745.62, 350.422 )
+
+[node name="coin11" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3015.26, 429.177 )
+
+[node name="coin16" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3607.25, 114.682 )
+
+[node name="coin17" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3741.79, 170.181 )
+
+[node name="coin18" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3793.93, 301.361 )
+
+[node name="coin24" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 4594.48, 507.811 )
+
+[node name="coin25" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 4594.48, 439.775 )
+
+[node name="enemy10" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 5370.55, 68.4418 )
+scale = Vector2( 2, 2 )
+
+[node name="coin26" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 5189.83, 117.635 )
+
+[node name="coin27" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 5189.83, 49.5991 )
+
+[node name="coin19" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3750.2, 432.541 )
+
+[node name="coin20" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3624.07, 484.676 )
+
+[node name="coin21" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3486.16, 440.95 )
+
+[node name="coin22" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3434.03, 301.361 )
+
+[node name="coin23" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3467.66, 181.954 )
+
+[node name="coin12" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 2612.14, 238.295 )
+
+[node name="coin6" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 1757.66, 118.159 )
+
+[node name="finish" parent="levels" instance=ExtResource( 7 )]
+position = Vector2( 6982.87, 0 )
+
+[node name="obstacle4" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 1759.43, 243.032 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle5" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 1763.92, -8.3999 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle6" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 1763.92, 489.973 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle10" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 1402.49, 173.439 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle11" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 1406.98, 420.381 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle12" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 2055.76, 153.235 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle13" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 2060.25, 400.176 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle7" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 2493.52, 377.727 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle8" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 2498.01, 126.296 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle9" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 2498.01, 624.669 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle14" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 2744.95, 218.337 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle15" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 2749.44, 465.279 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle16" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 3005.36, 296.91 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle19" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 3610.65, 296.91 )
+scale = Vector2( 3, 3 )
+
+[node name="obstacle17" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 3009.85, 45.4783 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle20" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 4593.89, 49.597 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle21" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 4593.89, 185.822 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle22" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 4593.89, 325.411 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="enemy11" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 5961.86, 458.618 )
+scale = Vector2( 2, 2 )
+
+[node name="coin28" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 5781.13, 507.811 )
+
+[node name="coin29" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 5781.13, 439.775 )
+
+[node name="obstacle26" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 5780.55, 49.597 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle27" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 5780.55, 185.822 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle28" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 5780.55, 325.411 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="enemy13" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 6962.73, 458.618 )
+scale = Vector2( 2, 2 )
+
+[node name="coin32" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 6782, 507.811 )
+
+[node name="coin33" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 6782, 439.775 )
+
+[node name="obstacle32" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 6781.42, 49.597 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle33" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 6781.42, 185.822 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle34" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 6781.42, 325.411 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle23" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 5192.61, 241.321 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle24" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 5192.61, 377.547 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle25" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 5192.61, 517.135 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="enemy12" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 6539.23, 68.4418 )
+scale = Vector2( 2, 2 )
+
+[node name="coin30" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 6358.51, 117.635 )
+
+[node name="coin31" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 6358.51, 49.5991 )
+
+[node name="obstacle29" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 6361.29, 241.321 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle30" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 6361.29, 377.547 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle31" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 6361.29, 517.135 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="obstacle18" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 3009.85, 543.851 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="lastboundary" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lastboundary"]
+collision_layer = 8
+collision_mask = 31
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="lastboundary/StaticBody2D"]
+position = Vector2( -192, 0 )
+shape = SubResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ui" parent="CanvasLayer" instance=ExtResource( 2 )]
