@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/ui.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/enemies/enemy_generic.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/coin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/finish.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/screens/parallax_bg.tscn" type="PackedScene" id=8]
 
 [sub_resource type="SegmentShape2D" id=1]
 b = Vector2( 0, 600 )
@@ -23,6 +24,8 @@ b = Vector2( 0, 600 )
 [node name="main" type="Node2D"]
 script = ExtResource( 3 )
 next_level = "res://scenes/levels/level-4.tscn"
+
+[node name="parallax_bg" parent="." instance=ExtResource( 8 )]
 
 [node name="border" type="Node2D" parent="."]
 __meta__ = {

@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://visual/Looping BG.PNG" type="Texture" id=1]
+[ext_resource path="res://visual/BG Asset 1.PNG" type="Texture" id=2]
+[ext_resource path="res://visual/BG Asset 2.PNG" type="Texture" id=3]
+[ext_resource path="res://scenes/screens/bg_parallax_gen.gd" type="Script" id=4]
+
+[node name="parallax_bg" type="Node2D"]
+z_index = -2
+
+[node name="bg" type="Node2D" parent="."]
+position = Vector2( -0.223, 0 )
+script = ExtResource( 4 )
+max_x = -1072
+
+[node name="Looping BG" type="Sprite" parent="bg"]
+scale = Vector2( 0.335, 0.333333 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Looping BG2" type="Sprite" parent="bg"]
+position = Vector2( 1072, 0 )
+scale = Vector2( 0.335, 0.333333 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="s1" type="Node2D" parent="."]
+script = ExtResource( 4 )
+max_x = -1040
+speed = 2
+
+[node name="BG Asset 1" type="Sprite" parent="s1"]
+scale = Vector2( 0.324444, 0.324444 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="BG Asset 2" type="Sprite" parent="s1"]
+position = Vector2( 1040, 0 )
+scale = Vector2( 0.324444, 0.324444 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="s2" type="Node2D" parent="."]
+script = ExtResource( 4 )
+max_x = -1040
+speed = 6
+
+[node name="BG Asset 2" type="Sprite" parent="s2"]
+scale = Vector2( 0.326053, 0.326053 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="BG Asset 3" type="Sprite" parent="s2"]
+position = Vector2( 1040, 0 )
+scale = Vector2( 0.326053, 0.326053 )
+texture = ExtResource( 3 )
+centered = false
