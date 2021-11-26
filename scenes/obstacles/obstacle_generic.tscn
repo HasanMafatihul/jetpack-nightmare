@@ -5,7 +5,7 @@
 [ext_resource path="res://visual/Obstacle/Obstacle 1.PNG" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 40.0
+radius = 33.6427
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 32.0
