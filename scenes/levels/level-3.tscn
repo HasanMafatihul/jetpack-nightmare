@@ -23,6 +23,7 @@ b = Vector2( 0, 600 )
 
 [node name="main" type="Node2D"]
 script = ExtResource( 3 )
+move_speed = 240
 next_level = "res://scenes/levels/level-4.tscn"
 
 [node name="parallax_bg" parent="." instance=ExtResource( 8 )]
@@ -131,38 +132,47 @@ scale = Vector2( 5, 5 )
 [node name="enemy" parent="levels" instance=ExtResource( 5 )]
 position = Vector2( 1550.71, 116.548 )
 scale = Vector2( 2, 2 )
+hp = 30
 
 [node name="enemy2" parent="levels" instance=ExtResource( 5 )]
 position = Vector2( 2354.54, 464.286 )
 scale = Vector2( 2, 2 )
+hp = 30
 
 [node name="enemy3" parent="levels" instance=ExtResource( 5 )]
 position = Vector2( 3881.56, 297.977 )
 scale = Vector2( 2, 2 )
+hp = 30
 
 [node name="enemy4" parent="levels" instance=ExtResource( 5 )]
 position = Vector2( 5121.32, 408.85 )
 scale = Vector2( 2, 2 )
+hp = 30
 
 [node name="enemy5" parent="levels" instance=ExtResource( 5 )]
 position = Vector2( 5925.15, 161.905 )
 scale = Vector2( 2, 2 )
+hp = 30
 
 [node name="enemy6" parent="levels" instance=ExtResource( 5 )]
 position = Vector2( 6804.58, 486.965 )
 scale = Vector2( 2, 2 )
+hp = 30
 
 [node name="enemy7" parent="levels" instance=ExtResource( 5 )]
 position = Vector2( 7564.58, 422.965 )
 scale = Vector2( 2, 2 )
+hp = 30
 
 [node name="enemy8" parent="levels" instance=ExtResource( 5 )]
 position = Vector2( 8375, 153.574 )
 scale = Vector2( 2, 2 )
+hp = 30
 
 [node name="enemy9" parent="levels" instance=ExtResource( 5 )]
 position = Vector2( 8974.39, 348.882 )
 scale = Vector2( 2, 2 )
+hp = 30
 
 [node name="coin" parent="levels" instance=ExtResource( 6 )]
 position = Vector2( 1307.82, 371.779 )

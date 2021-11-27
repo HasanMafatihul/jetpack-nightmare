@@ -10,6 +10,7 @@ const speed_h = 500
 # Variables
 var velocity
 var cd_timer = 0
+var collision
 
 # Player status
 var status = {
@@ -33,7 +34,9 @@ func get_input():
 # Move per physic process (see godot documentation)
 func _physics_process(delta):
 	velocity = get_input()
-	move_and_collide(velocity * delta)
+	velocity = move_and_slide(velocity)
+	if get_slide_count() > 1:
+		get_node("/root/main").damaged(1000)
 
 func _process(delta):
 	

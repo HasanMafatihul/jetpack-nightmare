@@ -11,8 +11,8 @@ z_index = -2
 [node name="bg" type="Node2D" parent="."]
 position = Vector2( -0.223, 0 )
 script = ExtResource( 4 )
-max_x = -1072
-speed = 3
+max_x = -1072.0
+speed = 3.0
 
 [node name="Looping BG" type="Sprite" parent="bg"]
 scale = Vector2( 0.335, 0.333333 )
@@ -33,8 +33,8 @@ centered = false
 
 [node name="s1" type="Node2D" parent="."]
 script = ExtResource( 4 )
-max_x = -1040
-speed = 2
+max_x = -1040.0
+speed = 2.0
 
 [node name="BG Asset 1" type="Sprite" parent="s1"]
 scale = Vector2( 0.324444, 0.324444 )
@@ -43,8 +43,7 @@ centered = false
 
 [node name="s2" type="Node2D" parent="."]
 script = ExtResource( 4 )
-max_x = -1040
-speed = 6
+max_x = -1040.0
 
 [node name="BG Asset 2" type="Sprite" parent="s2"]
 scale = Vector2( 0.326053, 0.326053 )
