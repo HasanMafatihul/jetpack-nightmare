@@ -34,6 +34,11 @@ func get_input():
 # Move per physic process (see godot documentation)
 func _physics_process(delta):
 	velocity = get_input()
+	if velocity == Vector2(0,0):
+		$AnimatedSprite.playing = false
+		$AnimatedSprite.frame = 0
+	else:
+		$AnimatedSprite.playing = true
 	velocity = move_and_slide(velocity)
 	if get_slide_count() > 1:
 		get_node("/root/main").damaged(1000)
