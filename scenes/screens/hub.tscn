@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/screens/hub.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://visual/Coins and Beams/Pink.PNG" type="Texture" id=2]
 [ext_resource path="res://scenes/screens/button_global.gd" type="Script" id=3]
 
 [node name="hub" type="Control"]
@@ -39,18 +39,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="img" type="TextureRect" parent="Panel"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -32.0
-margin_top = 10.0
-margin_right = 32.0
-margin_bottom = 64.0
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="name" type="Label" parent="Panel"]
 anchor_left = 0.5
 anchor_right = 0.5
@@ -58,7 +46,7 @@ margin_left = -104.0
 margin_top = 147.0
 margin_right = 104.0
 margin_bottom = 161.0
-text = "Name"
+text = "Item's name"
 
 [node name="price" type="Label" parent="Panel"]
 anchor_left = 0.5
@@ -78,13 +66,47 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -101.0
-margin_top = -115.0
+margin_top = -111.0
 margin_right = 102.0
-margin_bottom = -7.0
-text = "Description lorem ipsum dolor et"
+margin_bottom = -6.0
+text = "Description. Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. N'gha uh'e hupadgh y-Shub-Niggurath gof'nn, ph'goka ngsll'ha naflfhtagn"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="button_1" type="Button" parent="Panel"]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -77.0
+margin_top = 9.0
+margin_bottom = 29.0
+text = "Buy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_2" type="Button" parent="Panel"]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -225.839
+margin_top = 9.0
+margin_right = -148.839
+margin_bottom = 29.0
+text = "Equip"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="img" type="Sprite" parent="Panel"]
+position = Vector2( 127.438, 68.8448 )
+scale = Vector2( 0.123246, 0.123246 )
+texture = ExtResource( 2 )
 
 [node name="back" type="Button" parent="."]
 anchor_top = 1.0
@@ -117,3 +139,5 @@ __meta__ = {
 }
 
 [connection signal="item_selected" from="Items" to="." method="_on_Items_item_selected"]
+[connection signal="pressed" from="Panel/button_1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Panel/button_2" to="." method="_on_button_2_pressed"]

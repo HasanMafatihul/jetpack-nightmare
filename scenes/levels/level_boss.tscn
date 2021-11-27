@@ -1,0 +1,313 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/ui.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/levels.gd" type="Script" id=3]
+[ext_resource path="res://scenes/obstacles/obstacle_generic.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/enemies/enemy_generic.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/coin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/finish.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/screens/parallax_bg.tscn" type="PackedScene" id=8]
+
+[sub_resource type="SegmentShape2D" id=1]
+b = Vector2( 0, 600 )
+
+[sub_resource type="SegmentShape2D" id=2]
+b = Vector2( 1028, 0 )
+
+[sub_resource type="SegmentShape2D" id=3]
+b = Vector2( 1028, 0 )
+
+[sub_resource type="SegmentShape2D" id=4]
+b = Vector2( 0, 600 )
+
+[node name="main" type="Node2D"]
+script = ExtResource( 3 )
+next_level = "res://scenes/screens/main_menu.tscn"
+
+[node name="parallax_bg" parent="." instance=ExtResource( 8 )]
+
+[node name="border" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="border"]
+collision_layer = 2
+collision_mask = 7
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border/StaticBody2D"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="border/StaticBody2D"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="border/StaticBody2D"]
+position = Vector2( 1028, 0 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="border/StaticBody2D"]
+position = Vector2( 0, 600 )
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 103.383, 142.339 )
+collision_mask = 3
+
+[node name="levels" type="Node2D" parent="."]
+
+[node name="obstacle" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 1592.01, 500.867 )
+scale = Vector2( 2, 2 )
+
+[node name="obstacle2" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 1785.55, 123.452 )
+scale = Vector2( 3, 3 )
+
+[node name="obstacle3" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 2106.2, 407.596 )
+scale = Vector2( 3, 3 )
+
+[node name="obstacle4" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 2523.69, 79.0044 )
+scale = Vector2( 3, 3 )
+
+[node name="obstacle5" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 2514.17, 535.66 )
+scale = Vector2( 3, 3 )
+
+[node name="obstacle6" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 2767.82, 503.11 )
+scale = Vector2( 3, 3 )
+
+[node name="obstacle7" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 2781.3, 109.977 )
+scale = Vector2( 3, 3 )
+
+[node name="obstacle8" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 3069.09, 93.2963 )
+scale = Vector2( 3.5, 3.5 )
+
+[node name="obstacle9" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 3018.29, 491.164 )
+scale = Vector2( 3, 3 )
+
+[node name="obstacle10" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 3307.21, 499.166 )
+rotation = -0.78388
+scale = Vector2( 3.5, 3.5 )
+
+[node name="obstacle11" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 3376.39, 122.325 )
+rotation = -0.78388
+scale = Vector2( 3, 3 )
+
+[node name="obstacle12" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 3642.14, 78.4647 )
+rotation = -0.78388
+scale = Vector2( 3, 3 )
+
+[node name="obstacle13" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 3618.03, 453.228 )
+rotation = -0.78388
+scale = Vector2( 4, 4 )
+
+[node name="obstacle14" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 3895.76, 530.255 )
+rotation = -0.78388
+scale = Vector2( 3, 3 )
+
+[node name="obstacle15" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 3911.17, 116.465 )
+rotation = -0.78388
+scale = Vector2( 3, 3 )
+
+[node name="obstacle16" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 4176.92, 106.849 )
+rotation = -0.78388
+scale = Vector2( 3, 3 )
+
+[node name="obstacle17" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 4297.88, 571.696 )
+rotation = -0.78388
+scale = Vector2( 5, 5 )
+
+[node name="obstacle18" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 4968.95, 598.279 )
+rotation = -0.78388
+scale = Vector2( 5.2, 5.2 )
+
+[node name="obstacle19" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 4615.73, 115.089 )
+rotation = -0.78388
+scale = Vector2( 5, 5 )
+
+[node name="obstacle20" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 5334.95, 128.341 )
+rotation = -0.78388
+scale = Vector2( 5.5, 5.5 )
+
+[node name="obstacle21" parent="levels" instance=ExtResource( 4 )]
+position = Vector2( 5764, 505.581 )
+rotation = -0.78388
+scale = Vector2( 5.6, 5.6 )
+
+[node name="enemy" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 1144.63, 205.188 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy2" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 1311.31, 490.92 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy3" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 1908.17, 524.255 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy4" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 2216.12, 152.803 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy5" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 2965.93, 291.989 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy6" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 3715.73, 258.315 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy7" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 4095.02, 332.477 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy8" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 4340.82, 201.104 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy9" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 4707.39, 485.04 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy10" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 4964.84, 213.817 )
+scale = Vector2( 2, 2 )
+
+[node name="enemy11" parent="levels" instance=ExtResource( 5 )]
+position = Vector2( 5493.73, 368.5 )
+scale = Vector2( 2, 2 )
+
+[node name="coin" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 1810.1, 387.964 )
+
+[node name="coin2" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 1925.98, 292.72 )
+
+[node name="coin3" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 2406.42, 285.584 )
+
+[node name="coin4" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 2594.32, 346.234 )
+
+[node name="coin5" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 2659.72, 242.773 )
+
+[node name="coin6" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 2819.08, 309.369 )
+
+[node name="coin8" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3159.19, 360.504 )
+
+[node name="coin9" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3255.52, 223.746 )
+
+[node name="coin10" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3429.14, 352.18 )
+
+[node name="coin11" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3531.41, 189.259 )
+
+[node name="coin12" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3926.97, 322.608 )
+
+[node name="coin13" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3793.62, 219.225 )
+
+[node name="coin14" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 3813.09, 351.076 )
+rotation = -1.11383
+
+[node name="coin15" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 4061.81, 240.201 )
+rotation = -1.11383
+
+[node name="coin16" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 4058.82, 455.957 )
+rotation = -1.11383
+
+[node name="coin17" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 4349.49, 84.3771 )
+rotation = -1.11383
+
+[node name="coin18" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 4607.22, 499.408 )
+rotation = -1.11383
+
+[node name="coin19" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 4969.22, 109.408 )
+rotation = -1.11383
+
+[node name="coin20" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 5341.22, 509.408 )
+rotation = -1.11383
+
+[node name="coin21" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 4851.22, 299.408 )
+rotation = -1.11383
+
+[node name="coin22" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 5105.22, 321.408 )
+rotation = -1.11383
+
+[node name="coin24" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 5555.22, 291.408 )
+rotation = -1.11383
+
+[node name="coin25" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 5767.22, 71.4082 )
+rotation = -1.11383
+
+[node name="coin23" parent="levels" instance=ExtResource( 6 )]
+position = Vector2( 4399.22, 311.408 )
+rotation = -1.11383
+
+[node name="finish" parent="levels" instance=ExtResource( 7 )]
+position = Vector2( 6029.95, 0 )
+
+[node name="lastboundary" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="lastboundary"]
+collision_layer = 8
+collision_mask = 31
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="lastboundary/StaticBody2D"]
+position = Vector2( -192, 0 )
+shape = SubResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ui" parent="CanvasLayer" instance=ExtResource( 2 )]

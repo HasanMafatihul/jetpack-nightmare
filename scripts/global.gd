@@ -6,7 +6,8 @@ var current_scene = null
 # Persistent data
 var save_data = {
 	"coins": 0,
-	"high_score": 0
+	"high_score": 0,
+	"bought_weapons": ["Default"]
 }
 
 # Player status
@@ -19,9 +20,10 @@ var status = {
 
 # Player's weapon. Modifiable in hub
 var weapon = {
+	"name": "Default",
 	"damage": 10,
 	"cd": 0.5,
-	"text": ""
+	"text": "res://visual/Coins and Beams/Pink.PNG"
 }
 
 # Init

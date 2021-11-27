@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Green .PNG-951a02438085b29c52dfb0bc3a0aad5c.stex"
+path="res://.import/Green.PNG-2ab70783e904e106e754564d1f3a7a56.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://visual/Coins and Beams/Green .PNG"
-dest_files=[ "res://.import/Green .PNG-951a02438085b29c52dfb0bc3a0aad5c.stex" ]
+source_file="res://visual/Coins and Beams/Green.PNG"
+dest_files=[ "res://.import/Green.PNG-2ab70783e904e106e754564d1f3a7a56.stex" ]
 
 [params]
 

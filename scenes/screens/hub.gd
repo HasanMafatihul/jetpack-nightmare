@@ -1,9 +1,15 @@
 extends Control
 
+# Items
 export var item = {
-	"Pen": [null, "Just a pen", 100],
-	"You": [null, "You(?)", 150],
-	"Cheap": ["res://icon.png", "Cheap item", 50]
+	"Default": ["res://visual/Coins and Beams/Pink.PNG", "Default red laser.\nDamage: 10\nROF: 2/s", 100, false],
+	"Green Laser": ["res://visual/Coins and Beams/Green.PNG", "Green laser. Fast but less damage.\nDamage: 5\nROF: 4/s", 50, false],
+}
+
+# Weapons' stats
+var weapon = {
+	"Default": {"name": "Default","damage": 10,"cd": 0.5,"text": "res://visual/Coins and Beams/Pink.PNG"},
+	"Green Laser": {"name": "Green Laser","damage": 5,"cd": 0.25,"text": "res://visual/Coins and Beams/Green.PNG"}
 }
 
 var item_name = []
@@ -11,6 +17,8 @@ var selected
 
 # Adding items
 func _ready():
+	for i in global.save_data["bought_weapons"]:
+		item[i][3] = true
 	for i in item:
 		$Items.add_item(i)
 		item_name.append(i)
@@ -22,11 +30,33 @@ func _process(_delta):
 # When an item is selected
 func _on_Items_item_selected(index):
 	selected = item_name[index]
-	if item[selected][0]:
+	if item[selected][0] != null:
 		$Panel/img.texture = load(item[selected][0])
 	else:
 		$Panel/img.texture = null
 	$Panel/name.text = selected
 	$Panel/desc.text = item[selected][1]
-	$Panel/price.text = str(item[selected][2])
+	if item[selected][3]:
+		$Panel/price.text = "Bought"
+		$Panel/button_1.visible = false
+		$Panel/button_2.visible = true
+	else:
+		$Panel/price.text = str(item[selected][2])
+		$Panel/button_1.visible = true
+		$Panel/button_2.visible = false
 	
+
+# Buying items
+func _on_button_1_pressed():
+	if global.save_data["coins"] >= item[selected][2]:
+		global.save_data["coins"] -= item[selected][2]
+		global.save_data["bought_weapons"].append(selected)
+		$Panel/price.text = "Bought"
+		$Panel/button_1.visible = false
+		$Panel/button_2.visible = true
+	pass # Replace with function body.
+
+# Equipping items
+func _on_button_2_pressed():
+	global.weapon = weapon[selected]
+	pass # Replace with function body.

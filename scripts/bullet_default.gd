@@ -6,6 +6,12 @@ export var speed = 20
 # Bullet's damage
 var damage = 10
 
+# Bullet's texture
+var text = null
+
+func _ready():
+	$icon.texture = load(text)
+
 # Bullet movement
 func _physics_process(delta):
 	
