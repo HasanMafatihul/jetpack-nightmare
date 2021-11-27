@@ -34,13 +34,19 @@ func get_input():
 # Move per physic process (see godot documentation)
 func _physics_process(delta):
 	velocity = get_input()
+	
+	# Animation
 	if velocity == Vector2(0,0):
 		$AnimatedSprite.playing = false
 		$AnimatedSprite.frame = 0
 	else:
 		$AnimatedSprite.playing = true
+		
+	# Movement
 	velocity = move_and_slide(velocity)
-	if get_slide_count() > 1:
+	
+	# Collision with boundary and border causing glitch, turn it to death.
+	if get_slide_count() > 2:
 		get_node("/root/main").damaged(1000)
 
 func _process(delta):
