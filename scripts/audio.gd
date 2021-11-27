@@ -26,7 +26,6 @@ func playSong(song: String):
 # Play sound using respective audiostream
 func playSound(sound:String):
 	get_node(soundDict[sound]).play()
-	print(sound)
 
 func stopAll():
 	ost.stop()

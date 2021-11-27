@@ -44,10 +44,6 @@ func _physics_process(delta):
 		
 	# Movement
 	velocity = move_and_slide(velocity)
-	
-	# Collision with boundary and border causing glitch, turn it to death.
-	if get_slide_count() > 2:
-		get_node("/root/main").damaged(1000)
 
 func _process(delta):
 	

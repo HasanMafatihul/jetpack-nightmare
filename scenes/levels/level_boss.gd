@@ -22,10 +22,8 @@ func _process(delta):
 	if player.status["hp"] <= 0:
 		# Call UI fail function to handle it
 		ui.fail()
-		
+	
 	$CanvasLayer/BossHealth.value = $boss_boss/boss.hp
-
-
 
 # Passing damaged to player
 func damaged(damage:int):
@@ -39,15 +37,15 @@ func score(score:int):
 func finish():
 	# Shows score etc and wait
 	global.status = player.status
-	
-	# Goto next level after things receed.
-	global.goto_scene(next_level)
+	get_tree().paused = true
+	$CanvasLayer/win/AnimationPlayer.play("win")
 
 # Boss' summon enemy
 func _on_boss_summon_enemy():
 	rng.randomize()
 	var inst = enemy.instance()
-	inst.transform.origin = Vector2(1085 + rng.randf_range(0, 50), rng.randf_range(0, 640))
+	inst.transform.origin = Vector2(1085 + rng.randf_range(0, 200), rng.randf_range(40, 600))
+	inst.scale = Vector2(1.5, 1.5)
 	print("summon enemy")
 	inst.speed = 2
 	add_child(inst)

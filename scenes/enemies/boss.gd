@@ -16,7 +16,7 @@ var bullet = preload("res://scenes/enemies/boss_bullet.tscn")
 var score
 
 # Boss' HP
-export var hp = 2000
+export var hp = 1000
 
 export var texture_rect = [
 	
@@ -36,14 +36,14 @@ func _physics_process(delta):
 		# Randomize action
 		var r
 		if $icon.animation == "glitch_fast":
-			for i in range(rng.randi_range(1,4)):
+			for i in range(rng.randi_range(1,2)):
 				emit_signal("summon_enemy")
 			r = rng.randi_range(0,9)
 		else:
 			r = rng.randi_range(0,10)
 		
 		if $icon.animation == "glitch":
-			for i in range(rng.randi_range(2,5)):
+			for i in range(rng.randi_range(2,3)):
 				emit_signal("summon_enemy")
 		
 		$icon.playing = false
@@ -76,9 +76,7 @@ func _physics_process(delta):
 	
 	# Boss' death
 	if hp <= 0:
-		audio.playSound("enemy_die")
 		get_node("/root/main").score(score)
-		queue_free()
 		get_node("/root/main").finish()
 	
 	# Boss' attack

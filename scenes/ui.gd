@@ -36,6 +36,10 @@ func fail():
 	# Play animation to show the fail node/screen
 	$fail/AnimationPlayer.play("show")
 	$fail.visible = true
+	var score = round(status["score"])
+	$fail/score.text = "Score = " + str(score)
+	if score > global.save_data["high_score"]:
+		global.save_data["high_score"] = score
 
 # Fail node's exit button pressed
 func _on_exit_fail_pressed():

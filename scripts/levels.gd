@@ -42,3 +42,8 @@ func finish():
 	
 	# Goto next level after things receed.
 	global.goto_scene(next_level)
+
+
+func _on_Area2D_body_entered(body):
+	if body.collision_layer == 1:
+		damaged(1000)

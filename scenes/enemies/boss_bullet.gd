@@ -15,7 +15,6 @@ var hit = 0
 # Bullet movement
 func _physics_process(delta):
 	transform.origin.x -= speed
-	print(transform.origin.x)
 
 # Enemy hit something
 func _on_enemy_body_entered(body):

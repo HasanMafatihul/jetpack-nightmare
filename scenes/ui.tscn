@@ -79,6 +79,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [ false, true ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("score:percent_visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
 
 [node name="ui" type="Control"]
 pause_mode = 2
@@ -133,7 +145,7 @@ anims/show = SubResource( 1 )
 [node name="ColorRect" type="ColorRect" parent="fail"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.1 )
+color = Color( 0, 0, 0, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -149,14 +161,30 @@ margin_right = 59.0
 margin_bottom = -93.0
 text = "You failed!"
 align = 1
-percent_visible = 0.0397887
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="score" type="Label" parent="fail"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -215.0
+margin_top = -81.0
+margin_right = 216.0
+margin_bottom = -67.0
+text = "Score = "
+align = 1
+percent_visible = 0.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="exit_fail" type="Button" parent="fail"]
 visible = false
-self_modulate = Color( 1, 1, 1, 0.0397887 )
+self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
