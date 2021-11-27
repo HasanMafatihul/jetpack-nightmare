@@ -9,7 +9,6 @@ const speed_h = 500
 
 # Variables
 var velocity
-var cd = 0.2
 var cd_timer = 0
 
 # Player status
@@ -49,9 +48,10 @@ func _process(delta):
 	if Input.is_action_pressed("shoot") and cd_timer <= 0:
 		var inst = bullet.instance()
 		inst.transform = transform
+		inst.damage = status["damage"]
 		get_parent().add_child(inst)
 		audio.playSound("shoot")
-		cd_timer = cd
+		cd_timer = status["cd"]
 
 
 # Getting damaged

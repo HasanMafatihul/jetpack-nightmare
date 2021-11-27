@@ -6,26 +6,38 @@ var random = RandomNumberGenerator.new()
 export var damage = 10
 
 # Score by killing
-export var score = 5
+var score = 5
 
-# Enemy custom speed. Adjustable
-export var move = 0
+# Enemy's HP
+export var hp = 20
 
 export var texture_rect = [
 	
 ]
+
+var hit = 0
 
 # Initiate
 func _ready():
 	# Change texture to random
 	random.randomize()
 	var rng = random.randi_range(0, texture_rect.size() - 1)
-	print(rng)
 	$icon.set_texture(load(texture_rect[rng]))
+	
+	# Setting enemy's score
+	score = hp
 
 # Independent enemy movement
 func _physics_process(delta):
-	translate(Vector2(-move * delta, 0))
+	if hit > 0:
+		$icon.modulate = Color(1,0,0)
+		hit -= delta
+	else:
+		$icon.modulate = Color(1,1,1)
+	if hp <= 0:
+		audio.playSound("enemy_die")
+		get_node("/root/main").score(score)
+		queue_free()
 
 # Enemy hit something
 func _on_enemy_body_entered(body):
@@ -33,10 +45,9 @@ func _on_enemy_body_entered(body):
 	match layer:
 		# Bullet
 		4:
-			queue_free()
+			hp -= body.damage
+			hit = 0.2
 			body.queue_free()
-			audio.playSound("enemy_die")
-			get_node("/root/main").score(score)
 		# Player
 		1:
 			body.damaged(damage)
@@ -44,6 +55,5 @@ func _on_enemy_body_entered(body):
 		# Last Boundary
 		8:
 			queue_free()
-			print("Last bound")
 			get_node("/root/main").damaged(damage)
 	

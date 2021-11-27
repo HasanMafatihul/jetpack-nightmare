@@ -12,7 +12,16 @@ var save_data = {
 # Player status
 var status = {
 	"hp": 100,
-	"score": 0
+	"score": 0,
+	"damage": 10,
+	"cd": 5
+}
+
+# Player's weapon. Modifiable in hub
+var weapon = {
+	"damage": 10,
+	"cd": 0.5,
+	"text": ""
 }
 
 # Init

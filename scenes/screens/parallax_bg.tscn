@@ -18,6 +18,12 @@ scale = Vector2( 0.335, 0.333333 )
 texture = ExtResource( 1 )
 centered = false
 
+[node name="Looping BG3" type="Sprite" parent="bg"]
+position = Vector2( -1071.78, 0 )
+scale = Vector2( 0.335, 0.333333 )
+texture = ExtResource( 1 )
+centered = false
+
 [node name="Looping BG2" type="Sprite" parent="bg"]
 position = Vector2( 1072, 0 )
 scale = Vector2( 0.335, 0.333333 )
@@ -34,24 +40,12 @@ scale = Vector2( 0.324444, 0.324444 )
 texture = ExtResource( 2 )
 centered = false
 
-[node name="BG Asset 2" type="Sprite" parent="s1"]
-position = Vector2( 1040, 0 )
-scale = Vector2( 0.324444, 0.324444 )
-texture = ExtResource( 2 )
-centered = false
-
 [node name="s2" type="Node2D" parent="."]
 script = ExtResource( 4 )
 max_x = -1040
 speed = 6
 
 [node name="BG Asset 2" type="Sprite" parent="s2"]
-scale = Vector2( 0.326053, 0.326053 )
-texture = ExtResource( 3 )
-centered = false
-
-[node name="BG Asset 3" type="Sprite" parent="s2"]
-position = Vector2( 1040, 0 )
 scale = Vector2( 0.326053, 0.326053 )
 texture = ExtResource( 3 )
 centered = false
