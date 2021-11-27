@@ -24,7 +24,7 @@ b = Vector2( 0, 600 )
 [node name="main" type="Node2D"]
 script = ExtResource( 3 )
 move_speed = 240
-next_level = "res://scenes/screens/main_menu.tscn"
+next_level = "res://scenes/levels/level_boss.tscn"
 
 [node name="parallax_bg" parent="." instance=ExtResource( 8 )]
 

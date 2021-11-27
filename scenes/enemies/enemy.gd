@@ -5,6 +5,9 @@ var random = RandomNumberGenerator.new()
 # Enemy damage. Adjustable
 export var damage = 10
 
+# Enemy's independent speed
+var speed = 0
+
 # Score by killing
 var score = 5
 
@@ -29,6 +32,9 @@ func _ready():
 
 # Independent enemy movement
 func _physics_process(delta):
+	transform.origin.x -= speed
+	
+	# Enemy's hit anim
 	if hit > 0:
 		$icon.modulate = Color(1,0,0)
 		hit -= delta
