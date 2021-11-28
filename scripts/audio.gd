@@ -2,7 +2,8 @@ extends Node
 
 onready var ost = $ost
 var turned = true
-var volume = 100
+var volume_master = 100
+var volume_sfx = 100
 
 var songDict = {
 	"ost_default": "res://audio/ost/menu-stage_mungkin.mp3",
@@ -19,7 +20,8 @@ var soundDict = {
 
 # Setting the volume every process
 func _process(_delta):
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear2db(volume/100))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear2db(volume_master/100))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("sfx"), linear2db(volume_sfx/100))
 
 # Play song using ost audiostream
 func playSong(song: String):

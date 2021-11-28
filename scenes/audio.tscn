@@ -19,21 +19,26 @@ stream = ExtResource( 4 )
 
 [node name="shoot" type="AudioStreamPlayer" parent="player"]
 stream = ExtResource( 1 )
+bus = "sfx"
 
 [node name="die" type="AudioStreamPlayer" parent="player"]
 stream = ExtResource( 5 )
+bus = "sfx"
 
 [node name="enemy" type="Node2D" parent="."]
 
 [node name="die" type="AudioStreamPlayer" parent="enemy"]
 stream = ExtResource( 3 )
+bus = "sfx"
 
 [node name="boss" type="Node2D" parent="."]
 
 [node name="boss" type="AudioStreamPlayer" parent="boss"]
 stream = ExtResource( 6 )
+bus = "sfx"
 
 [node name="coin" type="Node2D" parent="."]
 
 [node name="pop" type="AudioStreamPlayer" parent="coin"]
 stream = ExtResource( 7 )
+bus = "sfx"
