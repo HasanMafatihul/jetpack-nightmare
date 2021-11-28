@@ -4,7 +4,7 @@ extends Control
 export var item = {
 	"Default": ["res://visual/Coins and Beams/Pink.PNG", "Default red laser.\nDamage: 10\nROF: 2/s", 25, false],
 	"Green Laser": ["res://visual/Coins and Beams/Green.PNG", "Green laser. Fast but less damage.\nDamage: 5\nROF: 5/s", 50, false],
-	"Power": ["res://visual/Coins and Beams/Blue.PNG", "Very powerful.\nDamage: 50\nROF: 1/s", 150, false],
+	"Power": ["res://visual/Coins and Beams/Blue.PNG", "Very powerful.\nDamage: 50\nROF: 1/s", 250, false],
 }
 
 # Weapons' stats
