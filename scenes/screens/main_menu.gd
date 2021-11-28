@@ -6,7 +6,7 @@ func _ready():
 
 
 func _on_reset_data_pressed():
-	var save_data = {
+	global.save_data = {
 		"coins": 0,
 		"high_score": 0,
 		"bought_weapons": ["Default"]
