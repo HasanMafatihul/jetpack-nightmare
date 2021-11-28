@@ -11,6 +11,7 @@ var songDict = {
 var soundDict = {
 	"shoot" : "player/shoot",
 	"enemy_die" : "enemy/die",
+	"player_die" : "player/die",
 }
 
 # Setting the volume every process

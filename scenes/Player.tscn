@@ -9,7 +9,7 @@
 [ext_resource path="res://visual/MC/MC Walk 3.PNG" type="Texture" id=7]
 [ext_resource path="res://visual/MC/MC Walk 4.PNG" type="Texture" id=8]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 4 ) ],
 "loop": true,
@@ -17,7 +17,7 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16, 32 )
 
 [node name="Player" type="KinematicBody2D"]
@@ -26,7 +26,7 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -16, 0 )
 scale = Vector2( 0.0554622, 0.0554622 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 frame = 1
 
 [node name="Small Weapon 2" type="Sprite" parent="."]
@@ -36,4 +36,4 @@ texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -16, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )

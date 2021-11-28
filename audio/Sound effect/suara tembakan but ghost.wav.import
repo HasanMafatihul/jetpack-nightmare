@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/suara tembakan but ghost.wav-8cb8c788c10471d99c1a78322e52d40d.sample"
+
+[deps]
+
+source_file="res://audio/Sound effect/suara tembakan but ghost.wav"
+dest_files=[ "res://.import/suara tembakan but ghost.wav-8cb8c788c10471d99c1a78322e52d40d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

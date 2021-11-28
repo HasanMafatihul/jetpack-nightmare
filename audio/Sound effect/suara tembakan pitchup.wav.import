@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/suara tembakan pitchup.wav-b6500dc534996f49079a52da994b7e87.sample"
+
+[deps]
+
+source_file="res://audio/Sound effect/suara tembakan pitchup.wav"
+dest_files=[ "res://.import/suara tembakan pitchup.wav-b6500dc534996f49079a52da994b7e87.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

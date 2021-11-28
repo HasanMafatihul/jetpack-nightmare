@@ -30,6 +30,8 @@ func _on_exit_pressed():
 
 # On fail (Called from main)
 func fail():
+	audio.playSound("player_die")
+	
 	# Pause the game
 	main.paused = true
 	

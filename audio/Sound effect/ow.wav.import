@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/ow.wav-00f7977a89560a0fdc3e38a28bc5c8f6.sample"
+path="res://.import/ow.wav-4392eed7a9fa0d7f75aa75c4ee064505.sample"
 
 [deps]
 
-source_file="res://audio/ost/audioo/ow.wav"
-dest_files=[ "res://.import/ow.wav-00f7977a89560a0fdc3e38a28bc5c8f6.sample" ]
+source_file="res://audio/Sound effect/ow.wav"
+dest_files=[ "res://.import/ow.wav-4392eed7a9fa0d7f75aa75c4ee064505.sample" ]
 
 [params]
 

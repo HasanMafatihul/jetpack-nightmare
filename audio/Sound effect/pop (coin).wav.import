@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/gameover.wav-53ecbb6dbb5f256a1f7e91f5ca7e15d0.sample"
+path="res://.import/pop (coin).wav-f242ae56973eb8f8cb67b5e9e1ca9070.sample"
 
 [deps]
 
-source_file="res://audio/ost/audioo/gameover.wav"
-dest_files=[ "res://.import/gameover.wav-53ecbb6dbb5f256a1f7e91f5ca7e15d0.sample" ]
+source_file="res://audio/Sound effect/pop (coin).wav"
+dest_files=[ "res://.import/pop (coin).wav-f242ae56973eb8f8cb67b5e9e1ca9070.sample" ]
 
 [params]
 
