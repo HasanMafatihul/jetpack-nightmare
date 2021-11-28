@@ -132,20 +132,20 @@ text = "START"
 script = ExtResource( 2 )
 path = "res://scenes/init.tscn"
 
-[node name="options" type="Button" parent="VBoxContainer"]
+[node name="hub" type="Button" parent="VBoxContainer"]
 margin_top = 42.0
 margin_right = 289.0
 margin_bottom = 75.0
 size_flags_vertical = 3
-disabled = true
-text = "OPTIONS"
+text = "HUB"
 script = ExtResource( 2 )
+path = "res://scenes/screens/hub.tscn"
 
-[node name="hub" type="Button" parent="VBoxContainer"]
+[node name="reset_data" type="Button" parent="VBoxContainer"]
 margin_top = 85.0
 margin_right = 289.0
 margin_bottom = 118.0
 size_flags_vertical = 3
-text = "HUB"
-script = ExtResource( 2 )
-path = "res://scenes/screens/hub.tscn"
+text = "RESET DATA"
+
+[connection signal="pressed" from="VBoxContainer/reset_data" to="." method="_on_reset_data_pressed"]

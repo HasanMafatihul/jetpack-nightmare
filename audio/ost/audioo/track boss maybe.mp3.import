@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/track boss maybe.mp3-790a8b4c6a06556894d7d25a3b220f46.mp3str"
+
+[deps]
+
+source_file="res://audio/ost/audioo/track boss maybe.mp3"
+dest_files=[ "res://.import/track boss maybe.mp3-790a8b4c6a06556894d7d25a3b220f46.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

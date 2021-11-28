@@ -54,9 +54,7 @@ func _on_button_1_pressed():
 		$Panel/price.text = "Bought"
 		$Panel/button_1.visible = false
 		$Panel/button_2.visible = true
-	pass # Replace with function body.
 
 # Equipping items
 func _on_button_2_pressed():
 	global.weapon = weapon[selected]
-	pass # Replace with function body.

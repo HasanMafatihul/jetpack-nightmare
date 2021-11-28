@@ -1,11 +1,11 @@
 extends Node
 
 onready var ost = $ost
-var turned = false
+var turned = true
 var volume = 100
 
 var songDict = {
-	"MainLevel0": "res://assets/song1.wav"
+	"ost_default": "res://audio/ost/menu-stage_mungkin.mp3"
 }
 
 var soundDict = {

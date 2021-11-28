@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/menu-stage_mungkin.mp3-373e9a6a7de66eeb61dca47553ecfc21.mp3str"
+
+[deps]
+
+source_file="res://audio/ost/menu-stage_mungkin.mp3"
+dest_files=[ "res://.import/menu-stage_mungkin.mp3-373e9a6a7de66eeb61dca47553ecfc21.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
