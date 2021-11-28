@@ -10,6 +10,8 @@ var rng = RandomNumberGenerator.new()
 export var next_level:String
 
 func _ready():
+	
+	audio.playSong("ost_boss")
 	player.status = global.status
 	player.transform.origin = player.status["transform"]
 	$CanvasLayer/BossHealth.max_value = $boss_boss/boss.hp

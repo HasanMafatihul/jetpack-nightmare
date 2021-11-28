@@ -56,9 +56,11 @@ func _physics_process(delta):
 		elif r < 9:
 			$icon.play("glitch")
 			counter = rng.randf_range(1,4)
+			audio.playSound("boss_boss")
 		elif r <= 10:
-				$icon.play("glitch_fast")
-				counter = 1
+			$icon.play("glitch_fast")
+			counter = 1
+			audio.playSound("boss_boss")
 	
 	# State machine counter
 	if $icon.playing:

@@ -5,13 +5,16 @@ var turned = true
 var volume = 100
 
 var songDict = {
-	"ost_default": "res://audio/ost/menu-stage_mungkin.mp3"
+	"ost_default": "res://audio/ost/menu-stage_mungkin.mp3",
+	"ost_boss": "res://audio/ost/audioo/track boss maybe.mp3",
 }
 
 var soundDict = {
 	"shoot" : "player/shoot",
 	"enemy_die" : "enemy/die",
 	"player_die" : "player/die",
+	"boss_boss" : "boss/boss",
+	"coin_pop" : "coin/pop",
 }
 
 # Setting the volume every process
