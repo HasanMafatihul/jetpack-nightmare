@@ -2,14 +2,16 @@ extends Control
 
 # Items
 export var item = {
-	"Default": ["res://visual/Coins and Beams/Pink.PNG", "Default red laser.\nDamage: 10\nROF: 2/s", 100, false],
-	"Green Laser": ["res://visual/Coins and Beams/Green.PNG", "Green laser. Fast but less damage.\nDamage: 5\nROF: 4/s", 50, false],
+	"Default": ["res://visual/Coins and Beams/Pink.PNG", "Default red laser.\nDamage: 10\nROF: 2/s", 25, false],
+	"Green Laser": ["res://visual/Coins and Beams/Green.PNG", "Green laser. Fast but less damage.\nDamage: 5\nROF: 5/s", 50, false],
+	"Power": ["res://visual/Coins and Beams/Blue.PNG", "Very powerful.\nDamage: 50\nROF: 1/s", 150, false],
 }
 
 # Weapons' stats
 var weapon = {
 	"Default": {"name": "Default","damage": 10,"cd": 0.5,"text": "res://visual/Coins and Beams/Pink.PNG"},
-	"Green Laser": {"name": "Green Laser","damage": 5,"cd": 0.25,"text": "res://visual/Coins and Beams/Green.PNG"}
+	"Green Laser": {"name": "Green Laser","damage": 5,"cd": 0.2,"text": "res://visual/Coins and Beams/Green.PNG"},
+	"Power" : {"name": "Power", "damage": 50, "cd": 1, "text": "res://visual/Coins and Beams/Blue.PNG"}
 }
 
 var item_name = []

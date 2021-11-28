@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/screens/hub.gd" type="Script" id=1]
 [ext_resource path="res://visual/Coins and Beams/Pink.PNG" type="Texture" id=2]
@@ -9,6 +9,10 @@
 [ext_resource path="res://scenes/screens/bg_parallax_gen.gd" type="Script" id=7]
 [ext_resource path="res://scenes/screens/menu.tres" type="Theme" id=8]
 [ext_resource path="res://visual/Dreamland PersonalUse.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -187,10 +191,11 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -172.0
-margin_top = -23.0
-margin_right = -11.0
-margin_bottom = -9.0
+margin_left = -176.243
+margin_top = -35.7279
+margin_right = -15.2427
+margin_bottom = -8.72791
+custom_fonts/font = SubResource( 2 )
 text = "Coins"
 align = 2
 __meta__ = {
